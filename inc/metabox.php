@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gru
- * Date: 9/12/18
- * Time: 8:15 PM
- */
+function csdemo_metaboxes($metaboxes){
+	return $metaboxes;
+}
+add_filter('cs_metabox_options','csdemo_metaboxes');
