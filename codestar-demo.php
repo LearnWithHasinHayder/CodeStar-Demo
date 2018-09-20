@@ -10,7 +10,13 @@ License: GPLv2 or later
 Text Domain: codestar-demo
 Domain Path: /languages/
 */
-require_once(plugin_dir_path(__FILE__)."/lib/csf/cs-framework.php");
+define( 'CS_ACTIVE_FRAMEWORK', false );
+define( 'CS_ACTIVE_TAXONOMY', false );
+define( 'CS_ACTIVE_SHORTCODE', false );
+define( 'CS_ACTIVE_CUSTOMIZE', false );
+define( 'CS_ACTIVE_LIGHT_THEME', true );
+require_once( plugin_dir_path( __FILE__ ) . "lib/csf/cs-framework.php" );
+require_once( plugin_dir_path( __FILE__ ) . "inc/metabox.php" );
 function csdemo_assets() {
 	load_plugin_textdomain( 'codestar-demo', false, plugin_dir_path( __FILE__ ) . "/languages" );
 }
